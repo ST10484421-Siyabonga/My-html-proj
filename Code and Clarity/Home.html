@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siyabonga Msezane - Front-End Developer and Accessibility Advocate. Learn how to code and build accessible websites." />
+  <title>Code & Clarity | Siyabonga Msezane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script>
+    function toggleMessage() {
+      var message = document.getElementById('message');
+      if (message.style.display === 'none') {
+        message.style.display = 'block';
+      } else {
+        message.style.display = 'none';
+      }
+    }
+
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (username === "") {
+        alert("Username must be filled out");
+        return false;
+      }
+      
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+
+      if (message === "") {
+        alert("Message must be filled out");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="site-container">
+    <header role="banner" class="site-header">
+      <nav aria-label="Primary Navigation" class="main-nav">
+        <a href="/" class="logo">Kuda Moyo Digital</a>
+        <ul class="nav-list">
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" role="main">
+      <!-- Hero section -->
+      <section class="hero" aria-label="Introduction">
+        <div class="container">
+          <h1>Hi, I'm Siyabonga Msezane</h1>
+          <img src="images/Logo2.png" alt="Siyabonga Msezane - Front-End Developer">
+          <p>Front-End Developer & Accessibility Advocate based in Johannesburg, South Africa.</p>
+        </div>
+      </section>
+
+      <!-- Portfolio section -->
+      <section id="portfolio" aria-labelledby="portfolio-heading">
+        <div class="container">
+          <h2 id="portfolio-heading">Portfolio</h2>
+          <p>Here are some of my favorite projects with live demos, GitHub links, and accessibility scores.</p>
+        </div>
+      </section>
+
+      <section id="blog" aria-labelledby="blog-heading">
+        <div class="container">
+          <h2 id="blog-heading">Blog</h2>
+          <p>Sharing tutorials, accessibility tips, and reflections on front-end trends.</p>
+          // code pictures 
+          <ul class="blog-list">
+            <li><a href="#">Creating Skip Links for Better Navigation</a></li>
+            <li><a href="#">HTML: Why It Matters</a></li>
+    
+            <img src="images/premiumpic2.png"/>
+           
+          </ul>
+        </div>
+      </section>
+    
+
+      <section id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <h2 id="about-heading">About Me</h2>
+          <p>I started my journey in web development in 2021...</p>
+          <ul>
+            <li> Core values: Usability, Performance, and Equity</li>
+            <li>Overview
+              The Code and Clarity Foundation is a technical based foundation, non-governmental organisation  on the African continent.
+              
+              It works to unite people, with a common vision, to make a real and telling difference by serving mankind for the Greater Good.
+              
+              Assistance is provided unconditionally; assisting the needy, irrespective of human, race, religion, colour, class,  or political affiliation.
+              
+              Code and Clarity restores the hope and dignity of the most vulnerable in their time of need, rebuilding prosperous communities and empowering leaders of tomorrow.</li>
+    
+              <img src="images/computer-information-technology.jpg"/>
+    
+            <li> Certifications: [List if applicable]</li>
+            <li> Tech:HTML, CSS, JavaScript, Typescript, python.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <h2 id="contact-heading">Contact</h2>
+          <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required />
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+      <p>&copy; 2025 Siyabonga Msezane Digital. Built with love and accessibility in mind.</p>
+    </footer>
+  </div>
+</body>
+</html>

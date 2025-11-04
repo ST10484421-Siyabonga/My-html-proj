@@ -2,6 +2,7 @@
 Link to repo: https://github.com/ST10484421-Siyabonga/My-html-proj/tree/main/Code%20and%20Clarity# My-html-proj
 Name: Siyabonga
 Surname: Msezane
+I added js code for to toggle a message, seo best practices like adding alt attributes and meta description, html form creation and js validation for form fields.
 Referances for pictures:https://valenciacollege.edu/future-students/computer-information-technology-as.php  
 Date 2025
 https://www.istockphoto.com/nl/fotos/code  
